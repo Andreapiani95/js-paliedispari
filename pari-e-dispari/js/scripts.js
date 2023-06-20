@@ -10,13 +10,16 @@ console.log(resultFromPrompt);
         alert ('"pari" o "dispari"');
     }
 
-const numberFromPrompt = prompt ('Inserisci un numero tra 1 e 5');
+const numberFromPrompt = parseInt(prompt ('Inserisci un numero tra 1 e 5'));
 console.log(numberFromPrompt);
 
-function evenOrOdd (inputResult, inputNumber){
+function evenOrOdd (inputNumber){
+    parseInt(inputNumber);
     let computerNumber = Math.floor(Math.random()*5)+1;
+    parseInt(computerNumber);
     console.log(computerNumber);
-    let sum = inputNumber + computerNumber;
+    let sum = 0;
+    sum += inputNumber + computerNumber;
     console.log(sum);
 
     if (sum % 2 == 0){
@@ -26,6 +29,8 @@ function evenOrOdd (inputResult, inputNumber){
         return 1;
     }
 }
+
+evenOrOdd (numberFromPrompt);
 
 if (flagResult = evenOrOdd){
     document.getElementById('output').innerHTML = 'Evviva, hai vinto!';
